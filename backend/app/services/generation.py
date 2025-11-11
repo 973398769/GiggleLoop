@@ -27,4 +27,3 @@ async def generate_gif(prompt: str):
             "status": "error",
             "error": str(e)
         }
-    
