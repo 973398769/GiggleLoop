@@ -11,6 +11,7 @@ pipe = pipe.to(device)
 
 async def generate_gif(prompt: str):
     try:
+        # Generate image using Stable Diffusion
         image = pipe(prompt).images[0]
         
         filename = f"{uuid.uuid4()}.gif"
@@ -26,3 +27,4 @@ async def generate_gif(prompt: str):
             "status": "error",
             "error": str(e)
         }
+    
